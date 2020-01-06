@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './server.component.html'
 })
 export class ServerComponent  {
-  serverElements = [];
+  serverElements = [{type: 'server', name: 'TestServer', content: 'Just a test!'}];
 }
