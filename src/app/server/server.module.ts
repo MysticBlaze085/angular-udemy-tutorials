@@ -6,7 +6,8 @@ import { ServerElementComponent } from './server-element/server-element.componen
 import { ServerComponent } from './server.component';
 
 const routes: Routes = [
-  {path: '', component: ServerComponent}
+  {path: '', component: ServerComponent},
+  {path: 'server', pathMatch: 'full', component: ServerComponent}
 ]
 
 @NgModule({
@@ -15,7 +16,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [ServerComponent, CockpitComponent, ServerElementComponent],
-  exports: [CockpitComponent, ServerElementComponent]
+  exports: [CockpitComponent, ServerElementComponent, ServerComponent]
 })
 export class ServerModule {
 }
